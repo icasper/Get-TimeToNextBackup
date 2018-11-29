@@ -34,3 +34,4 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 }
 
 Get-TimeToNextBackup Everyday 23
+
