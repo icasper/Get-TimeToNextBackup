@@ -15,7 +15,7 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 	}
 
 	if($dayOfWeek -eq "Everyday"){
-		$timeToNextBackupHash = (Get-Date -Hour $hourOfDay)-(Get-Date)
+		$timeToNextBackupHash = (Get-Date -Hour $hourOfDay -Minute 0 -Second 0)-(Get-Date)
 		$timeToNextBackup = $timeToNextBackupHash.Days.toString()+" Days "+$timeToNextBackupHash.Hours.toString()+" Hours "+$timeToNextBackupHash.Minutes.toString()+ " Minutes"
 		return $timeToNextBackup
 	}
