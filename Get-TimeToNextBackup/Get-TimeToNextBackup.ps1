@@ -16,7 +16,7 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 
 	if($dayOfWeek -eq "Everyday"){
 		$timeToNextBackupHash = (Get-Date -Hour $hourOfDay -Minute 0 -Second 0)-(Get-Date)
-		$timeToNextBackup = $timeToNextBackupHash.Days.toString()+" Days "+$timeToNextBackupHash.Hours.toString()+" Hours "+$timeToNextBackupHash.Minutes.toString()+ " Minutes"
+		$timeToNextBackup = $timeToNextBackupHash.Days.toString()+" Days "+$timeToNextBackupHash.Hours.toString()+" Hours "+$timeToNextBackupHash.Minutes.toString()+ " Minutes "+$timeToNextBackupHash.Seconds.toString()+" Seconds"
 		return $timeToNextBackup
 	}
 
@@ -28,7 +28,7 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 	$dayOfYearBackup = $dayOfyear+$daysToBackup
 	$dateOfNextBackup = (Get-Date -Month 1 -Day 1 -Hour $hourOfDay -Minute 0 -Second 0).addDays($dayOfYearBackup-1)
 	$timeToNextBackupHash = $dateOfNextBackup-(Get-Date)
-	$timeToNextBackup = $timeToNextBackupHash.Days.toString()+" Days "+$timeToNextBackupHash.Hours.toString()+" Hours "+$timeToNextBackupHash.Minutes.toString()+ " Minutes"
+	$timeToNextBackup = $timeToNextBackupHash.Days.toString()+" Days "+$timeToNextBackupHash.Hours.toString()+" Hours "+$timeToNextBackupHash.Minutes.toString()+ " Minutes "+$timeToNextBackupHash.Seconds.toString()+" Seconds"
 	return $timeToNextBackup
 	
 }
