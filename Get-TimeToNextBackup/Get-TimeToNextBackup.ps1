@@ -26,25 +26,29 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 	.PARAMETER hourOfDay
 	Passes the hour of the day i.e 23
 
-	.OUTPUT
+	.INPUTS
+
+	None
+
+	.OUTPUTS
 
 	Returns the time information Days, Hours, Minutes and Seconds to the next backup
-	
+
 	.NOTES
 
-	Function           : Get-TimeToNextBackup
-	Author             : Ian Casper
-	Creation Date      : 28.11.2018
-	Change Information : 30.11.2018 Added this documentation code to the function
+	Program		: function Get-TimeToNextBackup
+	Author		: Ian Casper
+	Creation Date	: 28.11.2018
+	Change Info	: 30.11.2018 Added this documentation code
 
 	.EXAMPLE
 
-	Get-TimeToNextBackup Everyday 23
+	C:\PS> Get-TimeToNextBackup Everyday 23
 	This example gets the days, hours, minutes and seconds to the next backup today at 23h00
 
 	.EXAMPLE
 
-	Get-TimeToNextBackup Thursday 11
+	C:\PS> Get-TimeToNextBackup Thursday 11
 	This example gets the days, hours, minutes and seconds to the next backup on Thursday this 
 	week if Thursday is in the future. If Thursday is in the past i.e. it has already gon by for
 	this week. then the time information for Thursday of the following week will be returned
