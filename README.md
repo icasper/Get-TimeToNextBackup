@@ -24,10 +24,10 @@ None
 Returns the time information Days, Hours, Minutes and Seconds to the next backup
 
 ## NOTES
-Program_______\: function Get-TimeToNextBackup
-Author________\: Ian Casper
-Creation Date_\: 28.11.2018
-Change Info___\: 30.11.2018 Added this documentation code
+Program       \: function Get-TimeToNextBackup
+Author        \: Ian Casper
+Creation Date \: 28.11.2018
+Change Info   \: 30.11.2018 Added this documentation code
 
 ## EXAMPLE
 
