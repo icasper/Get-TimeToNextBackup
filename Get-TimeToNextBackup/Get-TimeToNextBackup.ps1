@@ -17,8 +17,25 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 	hour of the day. The format in which it returns the result is Days, Hours, Minutes, Seconds. in addition
 	to the days of the week, "Everyday" can be passed to the function to calculate the time to the next backup
 	on that day.
+	
+	.notes
+	Function           : Get-TimeToNextBackup
+	Author             : Ian Casper
+	Creation Date      : 28.11.2018
+	Change Information : 30.11.2018 Added this documentation code to the function
+
+	.example
+	Get-TimeToNextBackup Everyday 23
+	This example gets the days, hours, minutes and seconds to the next backup today at 23h00
+
+	.example
+	Get-TimeToNextBackup Thursday 11
+	This example gets the days, hours, minutes and seconds to the next backup on Thursday this 
+	week if Thursday is in the future. If Thursday is in the past i.e. it has already gon by for
+	this week. then the time information for Thursday of the following week will be returned
 
 	#>
+
 
 	$weekDay = @{
 		Monday = 1;
