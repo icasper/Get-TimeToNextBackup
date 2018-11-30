@@ -4,7 +4,7 @@
 
 This PowerShell function returns the time to the next backup by passing the day of the week and the hour of the day.
 The format in which it returns the result is Days, Hours, Minutes, Seconds. in addition to the days of the week,
-"Everyday" can be passed to the function, to calculate the time to the next backup on that day.
+"Everyday" can be passed to the function to calculate the time to the next backup on that day.
 
 ## Why write this function?
 
