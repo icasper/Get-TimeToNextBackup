@@ -11,10 +11,10 @@ Function, pass day of week and time of day and return time to next backup as Day
   
 ## PARAMETERS 
 * dayOfWeek
-Passes the day of the week i.e. Friday
+  Passes the day of the week i.e. Friday
 
 * hourOfDay
-	Passes the hour of the day i.e 23
+   Passes the hour of the day i.e 23
   
 ## INPUTS
 None
@@ -23,10 +23,10 @@ None
 Returns the time information Days, Hours, Minutes and Seconds to the next backup
 
 ## NOTES
-Program		: function Get-TimeToNextBackup
-Author		: Ian Casper
-Creation Date	: 28.11.2018
-Change Info	: 30.11.2018 Added this documentation code
+Program		 - function Get-TimeToNextBackup
+Author		 - Ian Casper
+Creation Date	 - 28.11.2018
+Change Info	 - 30.11.2018 Added this documentation code
 
 ## EXAMPLE
 C:\PS> Get-TimeToNextBackup Everyday 23
