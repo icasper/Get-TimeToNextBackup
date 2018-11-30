@@ -1,8 +1,24 @@
-﻿#
+﻿
+
+
+#
 # Get-TimeToNextBackup.ps1
 #
 
 function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
+
+	<#
+
+	.Synopsis
+	Function, pass day of week and time of day and return time to next backup as Days, Hours, Minutes
+
+	.Description
+	This PowerShell function returns the time to the next backup by passing the day of the week and the 
+	hour of the day. The format in which it returns the result is Days, Hours, Minutes, Seconds. in addition
+	to the days of the week, "Everyday" can be passed to the function to calculate the time to the next backup
+	on that day.
+
+	#>
 
 	$weekDay = @{
 		Monday = 1;
@@ -33,5 +49,4 @@ function Get-TimeToNextBackup([string]$dayOfWeek, [int]$hourOfDay){
 	
 }
 
-Get-TimeToNextBackup Everyday 23
 
